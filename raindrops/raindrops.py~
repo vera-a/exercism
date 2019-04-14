@@ -1,0 +1,9 @@
+def raindrops(number):
+    if int(number) % 3 == 0:
+        return 'Pling'
+    elif int(number) % 5 == 0:
+        return 'Plang'
+    elif int(number) % 7 == 0:
+        return 'Plong'
+    else:
+        return str(number)

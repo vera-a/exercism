@@ -1,0 +1,22 @@
+from functools import reduce
+
+def verify(isbn):
+    if isbn[-1] == 'X':
+        isbn = isbn.replace('X', '10')
+    isbn = isbn.split('-')
+    list_of_digits = []
+    for element in isbn:
+            list_of_digits.append(int(element))
+    print(list_of_digits)
+    verified_list = []
+    i = 0
+    for n in range(10, 0, -1):
+        verified_list.append(list_of_digits[i] * n)
+        i += 1
+    print(verified_list)
+    result = reduce(lambda x, y: x + y, verified_list)
+    #  return result % 11 == 0
+    print(result)
+
+
+verify('3-598-21507-X')
