@@ -1,9 +1,9 @@
 def raindrops(number):
-    result = ''
-    if int(number) % 3 == 0:
-        result += 'Pling'
-    if int(number) % 5 == 0:
-        result += 'Plang'
-    if int(number) % 7 == 0:
-        result += 'Plong'
-    return result or str(number)
+    sound = []
+    if number % 3 == 0:
+        sound.append('Pling')
+    if number % 5 == 0:
+        sound.append('Plang')
+    if number % 7 == 0:
+        sound.append('Plong')
+    return ''.join(sound) or str(number)
